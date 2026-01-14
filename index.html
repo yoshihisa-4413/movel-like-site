@@ -4,17 +4,17 @@
   <meta charset="UTF-8">
   <title>ホーム | movel-like</title>
   <style>
-    body { font-family: sans-serif; margin: 0; padding: 0; background: #f7f7f7; }
-    header, nav { background: #222; color: #fff; padding: 1rem; text-align: center; }
-    nav a { color: #fff; margin: 0 10px; text-decoration: none; }
-    .hero { padding: 4rem 1rem; text-align: center; }
-    .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
-    footer { background: #222; color: #fff; text-align: center; padding: 1rem; }
+    body { margin: 0; font-family: sans-serif; background: #111; color: #fff; }
+    header, nav, footer { text-align: center; padding: 1rem; background: #000; }
+    nav a { color: #fff; margin: 0 1rem; text-decoration: none; }
+    .hero { padding: 6rem 1rem; text-align: center; }
+    .clock { font-size: 4rem; letter-spacing: 0.1em; margin-bottom: 1rem; }
+    .scroll-hint { margin-top: 2rem; font-size: 0.9rem; opacity: 0.7; }
   </style>
 </head>
 <body>
   <header>
-    <h1>movel-like サイト</h1>
+    <h1>movel-like</h1>
   </header>
   <nav>
     <a href="index.html">HOME</a>
@@ -24,11 +24,23 @@
     <a href="contact.html">CONTACT</a>
   </nav>
   <div class="hero">
-    <h1>今に強い、movel-like。</h1>
-    <p>ソーシャルネイティブなクリエイターの感性を集結させ、SNS を起点に感動を生むクリエイティブ集団をイメージしたサイトです。</p>
+    <div id="clock" class="clock"></div>
+    <p>ソーシャルネイティブなクリエイターの感性を集結させ、SNS を起点に感動を生むクリエイティブ集団。</p>
+    <div class="scroll-hint">SCROLL TO NEXT</div>
   </div>
   <footer>
     © 2026 movel-like
   </footer>
+  <script>
+    function updateClock() {
+      const now = new Date();
+      const h = String(now.getHours()).padStart(2, '0');
+      const m = String(now.getMinutes()).padStart(2, '0');
+      const s = String(now.getSeconds()).padStart(2, '0');
+      document.getElementById('clock').textContent = `${h}:${m}:${s}`;
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+  </script>
 </body>
 </html>
