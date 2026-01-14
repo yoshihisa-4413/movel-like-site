@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact | movel-like</title>
+  <style>
+    body { font-family: sans-serif; margin: 0; padding: 0; background: #f7f7f7; }
+    header, nav { background: #222; color: #fff; padding: 1rem; text-align: center; }
+    nav a { color: #fff; margin: 0 10px; text-decoration: none; }
+    main { padding: 2rem; }
+    form { max-width: 600px; margin: auto; }
+    label { display: block; margin-bottom: 0.5rem; }
+    input, textarea, select { width: 100%; padding: 0.5rem; margin-bottom: 1rem; }
+    footer { background: #222; color: #fff; text-align: center; padding: 1rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>CONTACT</h1>
+  </header>
+  <nav>
+    <a href="index.html">HOME</a>
+    <a href="about.html">ABOUT</a>
+    <a href="services.html">SERVICES</a>
+    <a href="news.html">NEWS</a>
+    <a href="contact.html">CONTACT</a>
+  </nav>
+  <main>
+    <form>
+      <label for="category">お問い合わせカテゴリ</label>
+      <select id="category" name="category">
+        <option>ビジネスに関するご相談</option>
+        <option>採用に関するお問い合わせ</option>
+        <option>広報取材に関するお問い合わせ</option>
+        <option>その他のお問い合わせ</option>
+      </select>
+
+      <label for="company">会社名</label>
+      <input id="company" type="text" name="company" placeholder="株式会社movel-like">
+
+      <label for="name">お名前</label>
+      <input id="name" type="text" name="name" placeholder="田中太郎">
+
+      <label for="email">メールアドレス</label>
+      <input id="email" type="email" name="email" placeholder="example@example.com">
+
+      <label for="phone">電話番号</label>
+      <input id="phone" type="tel" name="phone" placeholder="09012345678">
+
+      <label for="content">お問い合わせ内容</label>
+      <textarea id="content" name="content" placeholder="お問い合わせ内容をご記入ください"></textarea>
+
+      <button type="submit">送信</button>
+    </form>
+  </main>
+  <footer>
+    © 2026 movel-like
+  </footer>
+</body>
+</html>
